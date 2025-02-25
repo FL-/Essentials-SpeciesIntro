@@ -44,7 +44,7 @@
 if defined?(PluginManager) && !PluginManager.installed?("Show Species Introduction")
   PluginManager.register({                                                 
     :name    => "Show Species Introduction",                                        
-    :version => "1.1",                                                     
+    :version => "1.1.1",                                                     
     :link    => "https://www.pokecommunity.com/showthread.php?t=504992",             
     :credits => "FL"
   })
@@ -141,9 +141,9 @@ class SpeciesIntro
       if defined?(Essentials)
         ret = Essentials::VERSION.split(".")[0].to_i
       elsif defined?(ESSENTIALS_VERSION)
-        ret = ESSENTIALS_VERSION.split(".")[0].to_i
+        ret = ESSENTIALS_VERSION.to_s.split(".")[0].to_i
       elsif defined?(ESSENTIALSVERSION)
-        ret = ESSENTIALSVERSION.split(".")[0].to_i
+        ret = ESSENTIALSVERSION.to_s.split(".")[0].to_i
       end
       return ret
     end
